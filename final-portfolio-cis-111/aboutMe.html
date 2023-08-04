@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>about me</title>
+
+  <!-- CSS -->
+  <style>
+    body {
+      background-color: #ffe5ec;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+  }
+  h1{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  .navBar {
+      background-color: #ffb3c6;
+      display: flex;
+      justify-content: center;
+  }
+
+  .navBar a {
+      padding: 10px;
+      width: 20%;
+      padding-left: auto;
+      padding-right: auto;
+      font-size: 23px;
+      color: white;
+      text-decoration: none;
+  }
+
+  .navBar a:hover {
+      color: black;
+      background-color: #ffc2d1;
+    }
+
+  .factsBox{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  li{
+    text-align: left;
+  }
+
+  ul{
+    align-items: center;
+  }
+  ul li {
+  list-style-position: inside;
+}
+
+  img{
+    width: 40%;
+  }
+
+  .tile{
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-color: #ffc2d1;
+    padding: 15px;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .tile.active {
+    transform: translateY(0);
+    opacity: 1;
+    }
+  </style>
+
+  <!--JAVASCRIPT-->
+  <script>
+  function reveal() {
+    var tiles = document.querySelectorAll(".tile");
+  
+    for (var i = 0; i < tiles.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = tiles[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        tiles[i].classList.add("active");
+      } else {
+        tiles[i].classList.remove("active");
+      }
+    }
+  }
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on the page load
+reveal();
+
+
+  </script>
+</head>
+
+
+<!--BODY-->
+
+<body>
+  <div class="navBar">
+    <a href="index.html" target="_blank"> home</a>
+    <a href="aboutMe.html" target="_blank">about me</a>
+    <a href="projects.html" target="_blank">my projects</a>
+  </div>
+
+  <div>
+    <h1>about me!</h1>
+  </div>
+
+
+    <h3>basic facts about me</h3>
+  
+  <section>
+  <div class="factsBox">
+    <ul>
+      <li>My name is Chloe Li.</li>
+      <li>I live in San Francisco, California. </li>
+      <li>I am going to be a senior in high school this upcoming school year.</li>
+      <li>I love cats! (if you couldn't already tell from the images)</li>
+      <li>I love playing video games; my favorite video game is Valorant. I run a club at my school for the game and I manage an esports team for it!</li>
+      <li>My favorite color is pink and beige.</li>
+      <li>I like to bake but I don't know how to cook.</li>
+      <li>I really enjoy traveling with friends and family!</li>
+    </ul>
+  </div>
+</section>
+
+  <h3>photos of my "favorites" of 2023 (scroll to see them show up!)</h3>
+  
+  <div class="tile bottom-right">
+        <h3>my favorite friends!</h3>
+    <img class="friendsPic"  alt="my girlfriends and i" src="pics/girlfriends.jpg">
+    <img class="friendsPic" alt="my friends and i " src="pics/friends.jpg">
+    <img class="friendsPic" alt="angie and i" src="pics/angie.jpg">
+    <img class="friendsPic" alt="my friends at my birthday" src="pics/bday.jpg">
+
+  </div>
+
+  <div class="tile bottom-right">
+    <h3> my favorite trip: Irvine, California from this June</h3>
+    <img class="irvinePic" alt="irvine trip" src="pics/irvine.jpg">
+    <img class="irvinePic" alt="uci esports center" src="pics/uci.jpg">
+    <img class="irvinePic" alt="laguna beach" src="pics/beach.jpg">
+    <img class="irvinePic" alt="nic and i" src="pics/nic.jpg">
+
+  </div>
+
+  <div class="tile bottom-right">
+    <h3>my favorite memories with friends!</h3>
+    <img alt="computers at hackathon" src="pics/hackathon.jpg">
+    <img alt="eating ice cream at gdc" src="pics/gdc.jpg">
+    <img alt="before the AP Physics exam" src="pics/apPhysics.jpg">
+    <img alt="cheer team" src="pics/cheer.jpg">
+
+  </div>
+
+  <div class="tile">
+    <h3>my favorite desserts</h3>
+    <img class="dessert" alt="taiwanese dessert" src="pics/dessert.jpg">
+    <img alt="acai bowl" src="pics/acai.jpg">
+    <img alt="donuts" src="pics/donuts.jpg">
+    <img alt="funnel cake" src="pics/funnelCake.jpg">
+    
+  </div>
+
+  <div class="tile">
+        <h3>my favorite songs</h3>
+    <iframe width="400" height="315" src="https://www.youtube.com/embed/SXM1q0CTfew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="400" height="315" src="https://www.youtube.com/embed/llFdrwnBwLE?start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="400" height="315" src="https://www.youtube.com/embed/OjgBxXNP3gw?start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="400" height="315" src="https://www.youtube.com/embed/Dp48g6Fdn-c?start=37" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</body>
+
+</html>
